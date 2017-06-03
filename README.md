@@ -1,11 +1,11 @@
 # Kaki-Blog
 
-###Getting Started####
+###Getting Started
 Checkout this repo, install dependencies, then start the server with the following:
 
 ```
-	> git clone git@github.com:avishekjana/react-redux-contentful-blog.git
-	> cd react-redux-contentful-blog
+	> git clone https://lab.kakise.xyz/Kakise/Kaki-Blog.git
+	> cd Kaki-Blog
 	> npm install
 	> npm start
 ```
