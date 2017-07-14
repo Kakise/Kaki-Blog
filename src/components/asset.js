@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchAsset } from '../actions/index';
 import { Link } from 'react-router';
 
+// Assets viewer
 class Asset extends Component {
   componentDidMount() {
     this.props.fetchAsset(this.props.params.assetId)

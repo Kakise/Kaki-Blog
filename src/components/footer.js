@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { fetchPosts } from '../actions/index';
 
+// Pagination system (beautiful <3)
 class Footer extends Component {
   componentWillMount() {
     var posts = fetchPosts(this.props.params.id);
