@@ -441,3 +441,7 @@ footer p {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
+h1, h2, h3, h4, h5, h6, p {
+    font-family: Gillsans;
+    font-style: regular; 
+}
