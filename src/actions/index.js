@@ -53,7 +53,7 @@ export function fetchPage(id) {
   	  'fields.slug': id
   }).then(entry => {
 	return {
-	  type: FETCH_POST,
+	  type: FETCH_PAGE,
       payload: entry.items[0]
     };
   });
