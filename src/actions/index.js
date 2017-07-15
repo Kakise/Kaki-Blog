@@ -15,6 +15,12 @@ const client = createClient({
   accessToken: API_TOKEN
 });
 
+const preview = createClient({
+  space: API_SPACE_ID,
+  accessToken: API_PREVIEW_TOKEN,
+  host: 'preview.contentful.com'
+});
+
 // Fetch the posts list and pass it
 export function fetchPosts(id) {
   return client.getEntries({
@@ -54,13 +60,15 @@ export function fetchPage(id) {
 }
 
 //// TODO: Update this routine and add it to the router 
-//export function fetchPostPreview(id) {
-//  //const request = axios.get(`${API_BASE_URL}/spaces/${API_SPACE_ID}/entries/${id}?access_token=${API_TOKEN}&content_type=blogPost`);
-//  return {
-//    type: FETCH_POST,
-//    payload: request
-//  };
-//}
+// Fetch a post OR a page and pass it
+export function fetchPostPreview(id) {
+  return preview.getEntry(id).then(entry => {
+      return {
+        type: FETCH_POST,
+        payload: entry
+      };
+  });
+}
 
 // Fetch one asset (by id) and pass it
 export function fetchAsset(id) {
