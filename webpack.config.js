@@ -5,7 +5,7 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    path: __dirname,
+    path: __dirname + '/build',
     publicPath: '/build',
     filename: 'app.js'
   },

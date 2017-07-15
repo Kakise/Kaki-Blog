@@ -1,10 +1,11 @@
 # Kaki-Blog
 
-###Getting Started
+### Getting Started
+
 Checkout this repo, install dependencies, then start the server with the following:
 
 ```
-	> git clone https://lab.kakise.xyz/Kakise/Kaki-Blog.git
+	> git clone https://github.com/Kakise/Kaki-Blog.git
 	> cd Kaki-Blog
 	> npm install
 	> npm start

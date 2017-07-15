@@ -6,7 +6,6 @@ export const FETCH_ASSET = 'FETCH_ASSET';
 
 // Contentful setup
 import {createClient} from 'contentful';
-const API_BASE_URL = "https://cdn.contentful.com";
 const API_SPACE_ID = "wow5ow20m6w6";
 const API_TOKEN = "8091c755b428817b2db3f73510e71bbf826f89dc368cbbcde94d7e8011e165b7";
 const API_PREVIEW_TOKEN = "30926ad837e6b483c8625764edf9bdb873e06a33040d93b8644a76c5c3131039";
@@ -18,7 +17,7 @@ const client = createClient({
 
 // Fetch the posts list and pass it
 export function fetchPosts(id) {
-return client.getEntries({
+  return client.getEntries({
     order: "-fields.date",
     skip: 5 * (id - 1),
     limit: 5 * id,
@@ -41,15 +40,18 @@ export function fetchPost(id) {
   });
 }
 
-// TODO: Search by slug instead of id
-//export function fetchPage(id) {
-//  client.getEntry(id).then(entry => {
-//    return {
-//      type: FETCH_POST,
-//      payload: entry
-//    };
-//  });
-//}
+// Fetch a post (by slug) and pass it
+export function fetchPage(id) {
+  return client.getEntries({
+  	  content_type: 'blogPost',
+  	  'fields.slug[match]': id
+  }).then(entry => {
+	return {
+	  type: FETCH_POST,
+      payload: entry
+    };
+  });
+}
 
 //// TODO: Update this routine and add it to the router 
 //export function fetchPostPreview(id) {
@@ -60,7 +62,7 @@ export function fetchPost(id) {
 //  };
 //}
 
-//Fetch one asset (by id) and pass it
+// Fetch one asset (by id) and pass it
 export function fetchAsset(id) {
   return client.getAsset(id).then(entry => {
     return {
