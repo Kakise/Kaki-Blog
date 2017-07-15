@@ -5,7 +5,6 @@ import { Link } from 'react-router';
 import ReactDOM from 'react-dom';
 
 import { fetchPage } from '../actions/index';
-import Asset from './asset';
 
 class PageShow extends Component {
 
@@ -15,14 +14,18 @@ class PageShow extends Component {
   renderMarkdown(content) {
     return {
       __html: marked(content)
-    }
+    };
   }
   componentDidMount () {
     window.scrollTo(0, 0);
   }
   render() {
     const { page } = this.props;
-
+    
+	if (page) {
+		document.title = page.fields.title + ' | cat/dev/urandom';
+	}
+	
     if (!page) {
         return <h2>Chargement de la page en cours...</h2>
     }

@@ -5,7 +5,6 @@ import { Link } from 'react-router';
 import ReactDOM from 'react-dom';
 
 import { fetchPost } from '../actions/index';
-import Asset from './asset';
 
 class PostsShow extends Component {
 
