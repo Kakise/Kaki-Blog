@@ -43,7 +43,7 @@ export function fetchPost(id) {
 // Fetch a post (by slug) and pass it
 export function fetchPage(id) {
   return client.getEntries({
-  	  content_type: 'Page',
+  	  content_type: 'page',
   	  'fields.slug': id
   }).then(entry => {
 	return {
