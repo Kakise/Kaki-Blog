@@ -44,7 +44,7 @@ export function fetchPost(id) {
 export function fetchPage(id) {
   return client.getEntries({
   	  content_type: 'blogPost',
-  	  'fields.slug[match]': id
+  	  fields.slug: id
   }).then(entry => {
 	return {
 	  type: FETCH_POST,
