@@ -19,17 +19,13 @@ class PageShow extends Component {
   componentDidMount () {
     window.scrollTo(0, 0);
   }
-  render() {
-    const { page } = this.props;
-    
+    render() {
+        if (this.props.page.length !== 0) {
+    const page = this.props.page.items[0];
+
 	if (page) {
 		document.title = page.fields.title + ' | cat/dev/urandom';
-	}
-	
-    if (!page) {
-        return <h2>Chargement de la page en cours...</h2>
-    }
-      
+  }
     return (
       <article key={page.sys.id} className="uk-article">
         <div className="content">
@@ -41,6 +37,7 @@ class PageShow extends Component {
           </div>
       </article>
     );
+}
   }
 }
 

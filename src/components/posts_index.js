@@ -23,7 +23,7 @@ class PostsIndex extends Component {
       window.scrollTo(0, 0);
       this.props.fetchPosts(1);
   }
-    
+
   handlePageClick = (data) => {
     let selected = data.selected;
     let offset = Math.ceil(selected * this.props.perPage);
@@ -36,7 +36,7 @@ class PostsIndex extends Component {
     const { posts } = this.props;
 
       if(this.props.posts.length !== 0){
-    
+
     return this.props.posts.items.map((post, index) => {
         if (typeof post.fields.date !== "undefined"){
             post.date = new Intl.DateTimeFormat("fr-FR", {

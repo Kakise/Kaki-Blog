@@ -47,19 +47,20 @@ export function fetchPost(id) {
 }
 
 // Fetch a post (by slug) and pass it
+// Sounds good, doesn't work 😢
 export function fetchPage(id) {
   return client.getEntries({
   	  content_type: 'page',
   	  'fields.slug': id
   }).then(entry => {
 	return {
-	  type: FETCH_PAGE,
-      payload: entry.items[0]
+	    type: FETCH_PAGE,
+      payload: entry
     };
   });
 }
 
-//// TODO: Update this routine and add it to the router 
+//// TODO: Add this to the router (should work)
 // Fetch a post OR a page and pass it
 export function fetchPostPreview(id) {
   return preview.getEntry(id).then(entry => {

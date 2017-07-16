@@ -1,23 +1,22 @@
-<!-- Site web *statique* créer entièrement par Kakise :3 le code est dispo sur mon github a toute heure du jour et de la nuit bro -->
+<!-- Site web *statique* crée entièrement par Kakise :3 le code est dispo sur mon github a toute heure du jour et de la nuit bro -->
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Bon, je devrais probablement m'amuser à combiner ces deux feuilles, non? Oh et aussi les minifier. Webpack stp? -->
 	<link rel="stylesheet" href="/assets/css/main.css" />
 	<link rel="stylesheet" href="/assets/css/site.css" />
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 	<!-- TODO: Réecrire la partie highlight avec une extension npm -->
-	<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css"> -->
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/red/pace-theme-flat-top.min.css" integrity="sha256-ypKaFE4b++2V8H9B0N2mZKWDJp70YfS5MlGdv18ZK20=" crossorigin="anonymous" />
 	<title>cat /dev/urandom</title>
 	<meta name="keywords" content="decentralized,blog,ethereum,eth,cryptocoin,autonomous,ico,money,uncensored,feed,reader,ipfs" />
 	<meta name="description" content="Le blog personnel de Kakise. J'y partage mes idées, expériences, actions, projets, etc... J'adore aussi réagir aux actualités. Ce blog me sert surtout à garder une trace de ce que je fais" />
 	<meta name="revisit-after" content="2 days" />
 	<meta name="author" content="kakise.xyz" />
 	<meta name="rating" content="General" />
-	<meta name="reply-to" content="" />
+	<meta name="reply-to" content="me@kakise.xyz" />
 	<meta name="owner" content="kakise.xyz" />
 	<meta name="robots" content="index,follow" />
 	<meta name="product" content="Blog" />
@@ -31,13 +30,15 @@
 </head>
 
 <body>
-	<header>
-		<div class="animated bounceInDown" style="background-size: cover; background-image: url(/assets/images/lol.jpg);">
+	  <header>
+    <div style="background-size: cover; background-image: url(/assets/images/lol.jpg);">
+		<div class="animated bounceInDown">
 			<div class="inner">
 				<h1 class="blog-title" style="text-shadow: 0px 0px 4px rgba(0,0,0,0.5); font-family: 'Amatic SC', cursive; font-size: 6em; font-weight: bold;"><a style="text-decoration: none;" href="/">cat /dev/urandom</a></h1>
 				<h2 class="blog-description" style="text-shadow: 0px 0px 4px rgba(0,0,0,0.5); font-family: 'Amatic SC', cursive; font-size: 3em; color: crimson;">Le blog de Kakise<sup style="font-size: 0.6em;">TM</sup></h2>
 			</div>
 		</div>
+    </div>
 	</header>
 	<nav class="uk-navbar-container uk-margin" uk-navbar>
 		<div class="uk-navbar-center">
@@ -84,7 +85,6 @@
 	</footer>
 </body>
 <!-- Scripts -->
-<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script> -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
 <script src="/app.js"></script>
 

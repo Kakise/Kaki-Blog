@@ -1,6 +1,6 @@
 import { FETCH_POSTS, FETCH_POST, FETCH_PAGE } from '../actions/index';
 
-const INITIAL_STATE = { all: [], post: null, page: null };
+const INITIAL_STATE = { all: [], post: null, page: [] };
 
 export default function(state = INITIAL_STATE, action) {
   switch(action.type) {
