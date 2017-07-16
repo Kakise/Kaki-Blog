@@ -51,8 +51,7 @@ export function fetchPost(id) {
 export function fetchPage(id) {
   return client.getEntries({
   	  content_type: 'page',
-  	  'fields.slug': id,
-  	  limit: 1
+  	  'fields.slug': id
   }).then(entry => {
 	return {
 	    type: FETCH_PAGE,
