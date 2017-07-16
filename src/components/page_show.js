@@ -21,7 +21,7 @@ class PageShow extends Component {
   }
     render() {
         if (this.props.page.length !== 0) {
-    const page = this.props.page.items[0];
+            const {page} = this.props.page.items[0];
 
 	if (page) {
 		document.title = page.fields.title + ' | cat/dev/urandom';
@@ -36,13 +36,14 @@ class PageShow extends Component {
           <br />
           </div>
       </article>
+
     );
 }
-  }
+}
 }
 
 function mapStateToProps(state) {
-  return { post: state.posts.post };
+  return { page: state.posts.page };
 }
 
 export default connect(mapStateToProps, { fetchPage })(PageShow);

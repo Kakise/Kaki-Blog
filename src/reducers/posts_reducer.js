@@ -9,7 +9,7 @@ export default function(state = INITIAL_STATE, action) {
   case FETCH_POST:
     return { ...state, post: action.payload };
   case FETCH_PAGE:
-  	return { ...state, page: action.payload };
+  	return { ...state, all: action.payload };
   default:
     return state;
   }
