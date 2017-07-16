@@ -20,14 +20,16 @@ class PageShow extends Component {
     window.scrollTo(0, 0);
   }
     render() {
-        if (this.props.page.length !== 0) {
-            const {page} = this.props.page.items[0];
+        const { page } = this.props;
 
+    if (!page) {
+            return <h2>Chargement de la page en cours...</h2>
+    }
 	if (page) {
 		document.title = page.fields.title + ' | cat/dev/urandom';
   }
     return (
-      <article key={page.sys.id} className="uk-article">
+        <article key={page.sys.id} className="uk-article">
         <div className="content">
           <h1>{page.fields.title}</h1>
           <div className="major" dangerouslySetInnerHTML={this.renderMarkdown(page.fields.content)} />
@@ -40,7 +42,7 @@ class PageShow extends Component {
     );
 }
 }
-}
+
 
 function mapStateToProps(state) {
   return { page: state.posts.page };
