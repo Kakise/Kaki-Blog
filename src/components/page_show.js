@@ -36,6 +36,8 @@ class PageShow extends Component {
           <br />
           <Link to={"/"}>Retour à l'accueil !</Link>
           <br />
+          <br />
+          <br />
           </div>
       </article>
 
