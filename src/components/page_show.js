@@ -29,10 +29,10 @@ class PageShow extends Component {
 		  document.title = page.fields.title + ' | cat/dev/urandom';
       hljs.initHighlighting();
       hljs.initHighlightingOnLoad();
-      $('meta[name=og:description]').remove();
-      $('head').append( `<meta name="og:description" content="${page.fields.content.substring(0,255)}">` );
-      $('meta[name=og:title]').remove();
-      $('head').append( `<meta name="og:title" content="${page.fields.title}">` );
+      $('meta[property="og:description"]').remove();
+      $('head').append( `<meta property="og:description" content="${page.fields.content.substring(0,255)}">` );
+      $('meta[property="og:title"]').remove();
+      $('head').append( `<meta property="og:title" content="${page.fields.title}">` );
   }
     return (
         <article key={page.sys.id} className="uk-article">
