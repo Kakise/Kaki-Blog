@@ -28,7 +28,11 @@ class PostsShow extends Component {
     if (post) {document.title = post.fields.title + " | cat /dev/urandom";
 hljs.initHighlighting();
 hljs.initHighlightingOnLoad();
-    	    	var disqus_config = () => {
+      $('meta[name=og:description]').remove();
+      $('head').append( `<meta name="og:description" content="${post.fields.content.substring(0,255)}">` );
+      $('meta[name=og:title]').remove();
+      $('head').append( `<meta name="og:title" content="${post.fields.title}">` );  
+var disqus_config = () => {
 				this.page.url = window.location.href;
 				this.page.identifier = '${post.sys.id}';
 			};
