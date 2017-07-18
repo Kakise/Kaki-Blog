@@ -28,6 +28,7 @@
   "dependencies": {
     "babel-preset-stage-1": "^6.24.1",
     "contentful": "^3.8.0",
+    "highlightjs": "^9.10.0",
     "lodash": "^3.10.1",
     "marked": "^0.3.6",
     "react": "^0.14.9",

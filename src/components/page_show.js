@@ -13,7 +13,7 @@ class PageShow extends Component {
   }
   renderMarkdown(content) {
     return {
-      __html: marked(content)
+        __html: marked(content)
     };
   }
   componentDidMount () {
@@ -26,7 +26,9 @@ class PageShow extends Component {
             return <h2>Chargement de la page en cours...</h2>
     }
 	if (page) {
-		document.title = page.fields.title + ' | cat/dev/urandom';
+		  document.title = page.fields.title + ' | cat/dev/urandom';
+      hljs.initHighlighting();
+      hljs.initHighlightingOnLoad();
   }
     return (
         <article key={page.sys.id} className="uk-article">

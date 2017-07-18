@@ -13,7 +13,7 @@ class PostsShow extends Component {
   }
   renderMarkdown(content) {
     return {
-      __html: marked(content)
+        __html: marked(content)
     }
   }
   componentDidMount () {
@@ -25,8 +25,9 @@ class PostsShow extends Component {
     if (!post) {
         return <h2>Chargement de l'article en cours...</h2>
     }
-      
     if (post) {document.title = post.fields.title + " | cat /dev/urandom";
+hljs.initHighlighting();
+hljs.initHighlightingOnLoad();
     	    	var disqus_config = () => {
 				this.page.url = window.location.href;
 				this.page.identifier = '${post.sys.id}';
