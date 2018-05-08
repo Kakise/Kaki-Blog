@@ -1,3 +1,6 @@
+## Abandoned project
+Reason: lack of time and motivation to conitnue this.
+
 # Kaki-Blog
 
 ### Getting Started
